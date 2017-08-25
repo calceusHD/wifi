@@ -1,4 +1,8 @@
+#ifdef __WIN32
 #include <Winsock2.h>
+#else
+#include <arpa/inet.h>
+#endif
 #include <byteorder.h>
 
 union net_untion {

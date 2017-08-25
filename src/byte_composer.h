@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cstdint>
+#include <cstring>
 #include <array>
 
 
@@ -15,6 +16,7 @@ class byte_composer {
         inline byte_composer& add(T in) {
             m_bytes.resize(m_bytes.size() + sizeof(T));
             memcpy(&*(m_bytes.end() - sizeof(T)), &in, sizeof(T));
+            return *this;
         }
 
     public:

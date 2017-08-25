@@ -3,6 +3,8 @@
 #include <iostream>
 #include <byteorder.h>
 #include <cstdio>
+#include <cstring>
+
 
 network::network(std::string iface) {
     addrinfo *res = nullptr, hints;
@@ -12,10 +14,11 @@ network::network(std::string iface) {
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_protocol = IPPROTO_TCP;
-
+    int rv;
+#ifdef __WIN32
     WSADATA wsaData;
-    int rv = WSAStartup(MAKEWORD(2, 2), &wsaData);
-    
+    rv = WSAStartup(MAKEWORD(2, 2), &wsaData);
+#endif
 
     rv = getaddrinfo(iface.substr(0, iface.find(":", 0)).c_str(), iface.substr(iface.find(":", 0) + 1, iface.size()).c_str(), &hints, &res);
 
@@ -25,8 +28,12 @@ network::network(std::string iface) {
 }
 
 network::~network() {
+#ifdef __WIN32
     closesocket(m_s);
     WSACleanup();
+#else
+    close(m_s);
+#endif
 }
 
 int network::read(std::vector<uint8_t> &h80211, rx_info *ri) {

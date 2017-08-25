@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/qwe/wifi/build",
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/main.cpp.o -c /home/qwe/wifi/src/main.cpp",
+  "file": "/home/qwe/wifi/src/main.cpp"
+},
+{
+  "directory": "/home/qwe/wifi/build",
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/network.cpp.o -c /home/qwe/wifi/src/network.cpp",
+  "file": "/home/qwe/wifi/src/network.cpp"
+},
+{
+  "directory": "/home/qwe/wifi/build",
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/byteorder.cpp.o -c /home/qwe/wifi/src/byteorder.cpp",
+  "file": "/home/qwe/wifi/src/byteorder.cpp"
+},
+{
+  "directory": "/home/qwe/wifi/build",
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/crc32.cpp.o -c /home/qwe/wifi/src/crc32.cpp",
+  "file": "/home/qwe/wifi/src/crc32.cpp"
+},
+{
+  "directory": "/home/qwe/wifi/build",
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/packet.cpp.o -c /home/qwe/wifi/src/packet.cpp",
+  "file": "/home/qwe/wifi/src/packet.cpp"
+},
+{
+  "directory": "/home/qwe/wifi/build",
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/frame.cpp.o -c /home/qwe/wifi/src/frame.cpp",
+  "file": "/home/qwe/wifi/src/frame.cpp"
+}
+]

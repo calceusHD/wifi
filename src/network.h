@@ -1,10 +1,24 @@
+#ifndef _NETWORK_H
+#define _NETWORK_H
+
 #include <cstdint>
+#ifdef __WIN32
 #include <Winsock2.h>
 #include <ws2tcpip.h>
+#else
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <netdb.h>
+#include <unistd.h>
+#endif
 #include <string>
 #include <queue>
 #include <vector>
 #include <array>
+
+#ifndef __WIN32
+typedef int SOCKET;
+#endif
 
 class rx_info;
 class tx_info;
@@ -80,3 +94,5 @@ class tx_info {
     unsigned int ti_rate;
 };
 #pragma pack()
+
+#endif

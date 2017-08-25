@@ -14,7 +14,6 @@ class packet {
         unsigned int m_frame_size, m_resend_count;
 
     public:
-        packet();
 
         void set_data(const std::vector<uint8_t>& src);
         void write_to_network(network &tgt);

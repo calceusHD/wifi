@@ -17,6 +17,14 @@ Winsock2.h
 -
 ws2tcpip.h
 -
+sys/socket.h
+-
+sys/types.h
+-
+netdb.h
+-
+unistd.h
+-
 string
 -
 queue
@@ -31,11 +39,15 @@ vector
 -
 cstdint
 -
+cstring
+-
 array
 -
 
 /home/qwe/wifi/src/byteorder.cpp
 Winsock2.h
+-
+arpa/inet.h
 -
 byteorder.h
 -
@@ -71,10 +83,6 @@ common.h
 /home/qwe/wifi/src/main.cpp
 stdio.h
 -
-Winsock2.h
--
-ws2tcpip.h
--
 stdint.h
 -
 chrono
@@ -82,6 +90,8 @@ chrono
 thread
 -
 iostream
+-
+vector
 -
 network.h
 /home/qwe/wifi/src/network.h
@@ -101,6 +111,8 @@ byteorder.h
 -
 cstdio
 -
+cstring
+-
 
 /home/qwe/wifi/src/network.h
 cstdint
@@ -108,6 +120,14 @@ cstdint
 Winsock2.h
 -
 ws2tcpip.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+netdb.h
+-
+unistd.h
 -
 string
 -
