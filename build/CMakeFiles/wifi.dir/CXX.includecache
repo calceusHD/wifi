@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -26,7 +26,7 @@ vector
 array
 -
 
-C:/msys64/home/pc/wifi/src/byte_composer.h
+/home/qwe/wifi/src/byte_composer.h
 vector
 -
 cstdint
@@ -34,41 +34,41 @@ cstdint
 array
 -
 
-C:/msys64/home/pc/wifi/src/byteorder.cpp
+/home/qwe/wifi/src/byteorder.cpp
 Winsock2.h
 -
 byteorder.h
 -
 
-C:/msys64/home/pc/wifi/src/common.h
+/home/qwe/wifi/src/common.h
 array
 -
 
-C:/msys64/home/pc/wifi/src/crc32.cpp
+/home/qwe/wifi/src/crc32.cpp
 crc32.h
-C:/msys64/home/pc/wifi/src/crc32.h
+/home/qwe/wifi/src/crc32.h
 
-C:/msys64/home/pc/wifi/src/crc32.h
+/home/qwe/wifi/src/crc32.h
 vector
 -
 cstdint
 -
 
-C:/msys64/home/pc/wifi/src/frame.cpp
+/home/qwe/wifi/src/frame.cpp
 frame.h
-C:/msys64/home/pc/wifi/src/frame.h
+/home/qwe/wifi/src/frame.h
 byte_composer.h
-C:/msys64/home/pc/wifi/src/byte_composer.h
+/home/qwe/wifi/src/byte_composer.h
 
-C:/msys64/home/pc/wifi/src/frame.h
+/home/qwe/wifi/src/frame.h
 cstdint
 -
 vector
 -
 common.h
-C:/msys64/home/pc/wifi/src/common.h
+/home/qwe/wifi/src/common.h
 
-C:/msys64/home/pc/wifi/src/main.cpp
+/home/qwe/wifi/src/main.cpp
 stdio.h
 -
 Winsock2.h
@@ -84,11 +84,13 @@ thread
 iostream
 -
 network.h
-C:/msys64/home/pc/wifi/src/network.h
+/home/qwe/wifi/src/network.h
 crc32.h
-C:/msys64/home/pc/wifi/src/crc32.h
+/home/qwe/wifi/src/crc32.h
+packet.h
+/home/qwe/wifi/src/packet.h
 
-C:/msys64/home/pc/wifi/src/network.cpp
+/home/qwe/wifi/src/network.cpp
 network.h
 -
 cassert
@@ -100,7 +102,7 @@ byteorder.h
 cstdio
 -
 
-C:/msys64/home/pc/wifi/src/network.h
+/home/qwe/wifi/src/network.h
 cstdint
 -
 Winsock2.h
@@ -116,19 +118,19 @@ vector
 array
 -
 
-C:/msys64/home/pc/wifi/src/packet.cpp
+/home/qwe/wifi/src/packet.cpp
 packet.h
-C:/msys64/home/pc/wifi/src/packet.h
+/home/qwe/wifi/src/packet.h
 frame.h
-C:/msys64/home/pc/wifi/src/frame.h
+/home/qwe/wifi/src/frame.h
 
-C:/msys64/home/pc/wifi/src/packet.h
+/home/qwe/wifi/src/packet.h
 vector
 -
 array
 -
 network.h
-C:/msys64/home/pc/wifi/src/network.h
+/home/qwe/wifi/src/network.h
 common.h
-C:/msys64/home/pc/wifi/src/common.h
+/home/qwe/wifi/src/common.h
 

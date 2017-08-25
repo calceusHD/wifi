@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/msys64/home/pc/wifi/src/byteorder.cpp" "C:/msys64/home/pc/wifi/build/CMakeFiles/wifi.dir/src/byteorder.cpp.obj"
-  "C:/msys64/home/pc/wifi/src/crc32.cpp" "C:/msys64/home/pc/wifi/build/CMakeFiles/wifi.dir/src/crc32.cpp.obj"
-  "C:/msys64/home/pc/wifi/src/frame.cpp" "C:/msys64/home/pc/wifi/build/CMakeFiles/wifi.dir/src/frame.cpp.obj"
-  "C:/msys64/home/pc/wifi/src/main.cpp" "C:/msys64/home/pc/wifi/build/CMakeFiles/wifi.dir/src/main.cpp.obj"
-  "C:/msys64/home/pc/wifi/src/network.cpp" "C:/msys64/home/pc/wifi/build/CMakeFiles/wifi.dir/src/network.cpp.obj"
-  "C:/msys64/home/pc/wifi/src/packet.cpp" "C:/msys64/home/pc/wifi/build/CMakeFiles/wifi.dir/src/packet.cpp.obj"
+  "/home/qwe/wifi/src/byteorder.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/byteorder.cpp.o"
+  "/home/qwe/wifi/src/crc32.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/crc32.cpp.o"
+  "/home/qwe/wifi/src/frame.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/frame.cpp.o"
+  "/home/qwe/wifi/src/main.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/main.cpp.o"
+  "/home/qwe/wifi/src/network.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/network.cpp.o"
+  "/home/qwe/wifi/src/packet.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/packet.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
