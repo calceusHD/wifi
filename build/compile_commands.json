@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/msys64/home/pc/wifi/build",
+  "command": "/C/msys64/mingw64/bin/g++.exe    -I/C/msys64/home/pc/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/main.cpp.obj -c /C/msys64/home/pc/wifi/src/main.cpp",
+  "file": "C:/msys64/home/pc/wifi/src/main.cpp"
+},
+{
+  "directory": "C:/msys64/home/pc/wifi/build",
+  "command": "/C/msys64/mingw64/bin/g++.exe    -I/C/msys64/home/pc/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/network.cpp.obj -c /C/msys64/home/pc/wifi/src/network.cpp",
+  "file": "C:/msys64/home/pc/wifi/src/network.cpp"
+},
+{
+  "directory": "C:/msys64/home/pc/wifi/build",
+  "command": "/C/msys64/mingw64/bin/g++.exe    -I/C/msys64/home/pc/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/byteorder.cpp.obj -c /C/msys64/home/pc/wifi/src/byteorder.cpp",
+  "file": "C:/msys64/home/pc/wifi/src/byteorder.cpp"
+},
+{
+  "directory": "C:/msys64/home/pc/wifi/build",
+  "command": "/C/msys64/mingw64/bin/g++.exe    -I/C/msys64/home/pc/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/crc32.cpp.obj -c /C/msys64/home/pc/wifi/src/crc32.cpp",
+  "file": "C:/msys64/home/pc/wifi/src/crc32.cpp"
+},
+{
+  "directory": "C:/msys64/home/pc/wifi/build",
+  "command": "/C/msys64/mingw64/bin/g++.exe    -I/C/msys64/home/pc/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/packet.cpp.obj -c /C/msys64/home/pc/wifi/src/packet.cpp",
+  "file": "C:/msys64/home/pc/wifi/src/packet.cpp"
+},
+{
+  "directory": "C:/msys64/home/pc/wifi/build",
+  "command": "/C/msys64/mingw64/bin/g++.exe    -I/C/msys64/home/pc/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/frame.cpp.obj -c /C/msys64/home/pc/wifi/src/frame.cpp",
+  "file": "C:/msys64/home/pc/wifi/src/frame.cpp"
+}
+]
