@@ -1,3 +1,0 @@
-/home/qwe/wifi/build/CMakeFiles/rebuild_cache.dir
-/home/qwe/wifi/build/CMakeFiles/wifi.dir
-/home/qwe/wifi/build/CMakeFiles/edit_cache.dir
