@@ -20,7 +20,7 @@
 typedef int SOCKET;
 #endif
 
-class rx_info;
+struct rx_info;
 class tx_info;
 
 class network {

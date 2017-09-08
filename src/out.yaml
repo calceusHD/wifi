@@ -1,0 +1,24 @@
+---
+MainSourceFile:  ''
+Replacements:    
+  - FilePath:        /home/qwe/wifi/src/main.cpp
+    Offset:          455
+    Length:          7
+    ReplacementText: network_wifi
+  - FilePath:        /home/qwe/wifi/src/network.h
+    Offset:          368
+    Length:          7
+    ReplacementText: network_wifi
+  - FilePath:        /home/qwe/wifi/src/network.h
+    Offset:          728
+    Length:          7
+    ReplacementText: network_wifi
+  - FilePath:        /home/qwe/wifi/src/network.h
+    Offset:          761
+    Length:          7
+    ReplacementText: network_wifi
+  - FilePath:        /home/qwe/wifi/src/packet.h
+    Offset:          340
+    Length:          7
+    ReplacementText: network_wifi
+...
