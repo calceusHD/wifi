@@ -1,13 +1,16 @@
 #include "packet.h"
 #include "frame.h"
 
+packet_writer::packet_writer() {
 
-void packet::set_data(const std::vector<uint8_t>& in) {
+}
+
+void packet_writer::set_data(const std::vector<uint8_t>& in) {
     m_current_data = in;
 }
 
 
-void packet::write_to_network(network &tgt) {
+void packet_writer::write_to_network(network_wifi &tgt) {
     unsigned int byte_count = m_current_data.size();
     unsigned int frame_count = (byte_count - 1) / m_frame_size + 1; // elegantly round up
     

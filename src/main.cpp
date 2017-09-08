@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 
     bool client = argv[2][0] == 'c';
     net.set_channel(38);
-    packet p;
+    packet_writer p;
     std::vector<uint8_t> min_header = {
         0x08, 0x0,
         0x0, 0x0,

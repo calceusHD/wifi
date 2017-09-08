@@ -3,20 +3,21 @@
 
 #include <vector>
 #include <array>
-#include "network.h"
+#include "network_wifi.h"
 #include "common.h"
 
 
-class packet {
+class packet_writer {
     private:
         std::vector<uint8_t> m_current_data;
 
         unsigned int m_frame_size, m_resend_count;
 
     public:
+        packet_writer();
 
         void set_data(const std::vector<uint8_t>& src);
-        void write_to_network(network &tgt);
+        void write_to_network(network_wifi &tgt);
 
 
 
