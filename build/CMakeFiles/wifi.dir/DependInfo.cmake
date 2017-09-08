@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/qwe/wifi/src/crc32.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/crc32.cpp.o"
   "/home/qwe/wifi/src/frame.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/frame.cpp.o"
   "/home/qwe/wifi/src/main.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/main.cpp.o"
-  "/home/qwe/wifi/src/network.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/network.cpp.o"
+  "/home/qwe/wifi/src/network_wifi.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/network_wifi.cpp.o"
   "/home/qwe/wifi/src/packet.cpp" "/home/qwe/wifi/build/CMakeFiles/wifi.dir/src/packet.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -15,11 +15,16 @@ CMakeFiles/wifi.dir/src/frame.cpp.o: ../src/frame.h
 CMakeFiles/wifi.dir/src/main.cpp.o: ../src/common.h
 CMakeFiles/wifi.dir/src/main.cpp.o: ../src/crc32.h
 CMakeFiles/wifi.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/wifi.dir/src/main.cpp.o: ../src/network_wifi.h
 CMakeFiles/wifi.dir/src/main.cpp.o: ../src/packet.h
 
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o: ../src/byteorder.h
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o: ../src/network_wifi.h
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o: ../src/network_wifi.cpp
 
 CMakeFiles/wifi.dir/src/packet.cpp.o: ../src/common.h
 CMakeFiles/wifi.dir/src/packet.cpp.o: ../src/frame.h
+CMakeFiles/wifi.dir/src/packet.cpp.o: ../src/network_wifi.h
 CMakeFiles/wifi.dir/src/packet.cpp.o: ../src/packet.cpp
 CMakeFiles/wifi.dir/src/packet.cpp.o: ../src/packet.h
 

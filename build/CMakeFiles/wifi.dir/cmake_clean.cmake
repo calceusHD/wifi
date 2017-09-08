@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wifi.dir/src/main.cpp.o"
-  "CMakeFiles/wifi.dir/src/network.cpp.o"
+  "CMakeFiles/wifi.dir/src/network_wifi.cpp.o"
   "CMakeFiles/wifi.dir/src/byteorder.cpp.o"
   "CMakeFiles/wifi.dir/src/crc32.cpp.o"
   "CMakeFiles/wifi.dir/src/packet.cpp.o"

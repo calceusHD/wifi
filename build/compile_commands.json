@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/qwe/wifi/build",
-  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/network.cpp.o -c /home/qwe/wifi/src/network.cpp",
-  "file": "/home/qwe/wifi/src/network.cpp"
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/network_wifi.cpp.o -c /home/qwe/wifi/src/network_wifi.cpp",
+  "file": "/home/qwe/wifi/src/network_wifi.cpp"
 },
 {
   "directory": "/home/qwe/wifi/build",

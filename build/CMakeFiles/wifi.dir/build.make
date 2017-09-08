@@ -81,28 +81,28 @@ CMakeFiles/wifi.dir/src/main.cpp.o.provides: CMakeFiles/wifi.dir/src/main.cpp.o.
 CMakeFiles/wifi.dir/src/main.cpp.o.provides.build: CMakeFiles/wifi.dir/src/main.cpp.o
 
 
-CMakeFiles/wifi.dir/src/network.cpp.o: CMakeFiles/wifi.dir/flags.make
-CMakeFiles/wifi.dir/src/network.cpp.o: ../src/network.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qwe/wifi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wifi.dir/src/network.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wifi.dir/src/network.cpp.o -c /home/qwe/wifi/src/network.cpp
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o: CMakeFiles/wifi.dir/flags.make
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o: ../src/network_wifi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qwe/wifi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wifi.dir/src/network_wifi.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wifi.dir/src/network_wifi.cpp.o -c /home/qwe/wifi/src/network_wifi.cpp
 
-CMakeFiles/wifi.dir/src/network.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wifi.dir/src/network.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qwe/wifi/src/network.cpp > CMakeFiles/wifi.dir/src/network.cpp.i
+CMakeFiles/wifi.dir/src/network_wifi.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wifi.dir/src/network_wifi.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qwe/wifi/src/network_wifi.cpp > CMakeFiles/wifi.dir/src/network_wifi.cpp.i
 
-CMakeFiles/wifi.dir/src/network.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wifi.dir/src/network.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qwe/wifi/src/network.cpp -o CMakeFiles/wifi.dir/src/network.cpp.s
+CMakeFiles/wifi.dir/src/network_wifi.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wifi.dir/src/network_wifi.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qwe/wifi/src/network_wifi.cpp -o CMakeFiles/wifi.dir/src/network_wifi.cpp.s
 
-CMakeFiles/wifi.dir/src/network.cpp.o.requires:
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o.requires:
 
-.PHONY : CMakeFiles/wifi.dir/src/network.cpp.o.requires
+.PHONY : CMakeFiles/wifi.dir/src/network_wifi.cpp.o.requires
 
-CMakeFiles/wifi.dir/src/network.cpp.o.provides: CMakeFiles/wifi.dir/src/network.cpp.o.requires
-	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network.cpp.o.provides.build
-.PHONY : CMakeFiles/wifi.dir/src/network.cpp.o.provides
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o.provides: CMakeFiles/wifi.dir/src/network_wifi.cpp.o.requires
+	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network_wifi.cpp.o.provides.build
+.PHONY : CMakeFiles/wifi.dir/src/network_wifi.cpp.o.provides
 
-CMakeFiles/wifi.dir/src/network.cpp.o.provides.build: CMakeFiles/wifi.dir/src/network.cpp.o
+CMakeFiles/wifi.dir/src/network_wifi.cpp.o.provides.build: CMakeFiles/wifi.dir/src/network_wifi.cpp.o
 
 
 CMakeFiles/wifi.dir/src/byteorder.cpp.o: CMakeFiles/wifi.dir/flags.make
@@ -204,7 +204,7 @@ CMakeFiles/wifi.dir/src/frame.cpp.o.provides.build: CMakeFiles/wifi.dir/src/fram
 # Object files for target wifi
 wifi_OBJECTS = \
 "CMakeFiles/wifi.dir/src/main.cpp.o" \
-"CMakeFiles/wifi.dir/src/network.cpp.o" \
+"CMakeFiles/wifi.dir/src/network_wifi.cpp.o" \
 "CMakeFiles/wifi.dir/src/byteorder.cpp.o" \
 "CMakeFiles/wifi.dir/src/crc32.cpp.o" \
 "CMakeFiles/wifi.dir/src/packet.cpp.o" \
@@ -214,7 +214,7 @@ wifi_OBJECTS = \
 wifi_EXTERNAL_OBJECTS =
 
 wifi: CMakeFiles/wifi.dir/src/main.cpp.o
-wifi: CMakeFiles/wifi.dir/src/network.cpp.o
+wifi: CMakeFiles/wifi.dir/src/network_wifi.cpp.o
 wifi: CMakeFiles/wifi.dir/src/byteorder.cpp.o
 wifi: CMakeFiles/wifi.dir/src/crc32.cpp.o
 wifi: CMakeFiles/wifi.dir/src/packet.cpp.o
@@ -230,7 +230,7 @@ CMakeFiles/wifi.dir/build: wifi
 .PHONY : CMakeFiles/wifi.dir/build
 
 CMakeFiles/wifi.dir/requires: CMakeFiles/wifi.dir/src/main.cpp.o.requires
-CMakeFiles/wifi.dir/requires: CMakeFiles/wifi.dir/src/network.cpp.o.requires
+CMakeFiles/wifi.dir/requires: CMakeFiles/wifi.dir/src/network_wifi.cpp.o.requires
 CMakeFiles/wifi.dir/requires: CMakeFiles/wifi.dir/src/byteorder.cpp.o.requires
 CMakeFiles/wifi.dir/requires: CMakeFiles/wifi.dir/src/crc32.cpp.o.requires
 CMakeFiles/wifi.dir/requires: CMakeFiles/wifi.dir/src/packet.cpp.o.requires

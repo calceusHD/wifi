@@ -231,32 +231,32 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/network.o: src/network.cpp.o
+src/network_wifi.o: src/network_wifi.cpp.o
 
-.PHONY : src/network.o
+.PHONY : src/network_wifi.o
 
 # target to build an object file
-src/network.cpp.o:
-	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network.cpp.o
-.PHONY : src/network.cpp.o
+src/network_wifi.cpp.o:
+	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network_wifi.cpp.o
+.PHONY : src/network_wifi.cpp.o
 
-src/network.i: src/network.cpp.i
+src/network_wifi.i: src/network_wifi.cpp.i
 
-.PHONY : src/network.i
+.PHONY : src/network_wifi.i
 
 # target to preprocess a source file
-src/network.cpp.i:
-	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network.cpp.i
-.PHONY : src/network.cpp.i
+src/network_wifi.cpp.i:
+	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network_wifi.cpp.i
+.PHONY : src/network_wifi.cpp.i
 
-src/network.s: src/network.cpp.s
+src/network_wifi.s: src/network_wifi.cpp.s
 
-.PHONY : src/network.s
+.PHONY : src/network_wifi.s
 
 # target to generate assembly for a file
-src/network.cpp.s:
-	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network.cpp.s
-.PHONY : src/network.cpp.s
+src/network_wifi.cpp.s:
+	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network_wifi.cpp.s
+.PHONY : src/network_wifi.cpp.s
 
 src/packet.o: src/packet.cpp.o
 
@@ -306,9 +306,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/network.o"
-	@echo "... src/network.i"
-	@echo "... src/network.s"
+	@echo "... src/network_wifi.o"
+	@echo "... src/network_wifi.i"
+	@echo "... src/network_wifi.s"
 	@echo "... src/packet.o"
 	@echo "... src/packet.i"
 	@echo "... src/packet.s"
