@@ -1,4 +1,4 @@
-#include <network.h>
+#include <network_wifi.h>
 #include <cassert>
 #include <iostream>
 #include <byteorder.h>
@@ -6,7 +6,7 @@
 #include <cstring>
 
 
-network::network(std::string iface) {
+network_wifi::network_wifi(std::string iface) {
     addrinfo *res = nullptr, hints;
 
     memset(&hints, 0, sizeof(hints));
@@ -27,7 +27,7 @@ network::network(std::string iface) {
     rv = connect(m_s, res->ai_addr, (int)res->ai_addrlen);
 }
 
-network::~network() {
+network_wifi::~network_wifi() {
 #ifdef __WIN32
     closesocket(m_s);
     WSACleanup();
@@ -36,7 +36,7 @@ network::~network() {
 #endif
 }
 
-int network::read(std::vector<uint8_t> &h80211, rx_info *ri) {
+int network_wifi::read(std::vector<uint8_t> &h80211, rx_info *ri) {
     std::vector<uint8_t> buf;
 
     int cmd;
@@ -72,7 +72,7 @@ int network::read(std::vector<uint8_t> &h80211, rx_info *ri) {
     return h80211.size();
 }
 
-int network::write(const std::vector<uint8_t>& h80211, tx_info *ti) {
+int network_wifi::write(const std::vector<uint8_t>& h80211, tx_info *ti) {
     std::vector<uint8_t> tmp;
 
     tmp.resize(sizeof(*ti));
@@ -86,32 +86,32 @@ int network::write(const std::vector<uint8_t>& h80211, tx_info *ti) {
     return cmd(NET_WRITE, tmp);
 }
 
-int network::set_channel(int channel) {
+int network_wifi::set_channel(int channel) {
     std::vector<uint8_t> tmp;
     tmp.resize(sizeof(uint32_t));
     *(uint32_t*)tmp.data() = htonl(channel);
     return cmd(NET_SET_CHAN, tmp);
 }
 
-int network::get_channel() {
+int network_wifi::get_channel() {
     std::vector<uint8_t> tmp;
     return cmd(NET_GET_CHAN, tmp);
 }
 
-int network::set_rate(int rate) {
+int network_wifi::set_rate(int rate) {
     std::vector<uint8_t> tmp;
     tmp.resize(sizeof(uint32_t));
     *(uint32_t*)tmp.data() = htonl(rate);
     return cmd(NET_SET_RATE, tmp);
 }
 
-int network::get_rate() {
+int network_wifi::get_rate() {
     std::vector<uint8_t> tmp;
     return cmd(NET_GET_RATE, tmp);
 }
 
 
-int network::send(int command, const std::vector<uint8_t>& arg) {
+int network_wifi::send(int command, const std::vector<uint8_t>& arg) {
     std::vector<uint8_t> tmp(sizeof(net_hdr));
     net_hdr *hdr = (net_hdr*)tmp.data();
 
@@ -129,7 +129,7 @@ int network::send(int command, const std::vector<uint8_t>& arg) {
     return 0;
 }
 
-int network::read_exact(std::vector<uint8_t> &arg, int len) {
+int network_wifi::read_exact(std::vector<uint8_t> &arg, int len) {
     size_t rc;
     int rlen = 0;
     arg.resize(len);
@@ -147,7 +147,7 @@ int network::read_exact(std::vector<uint8_t> &arg, int len) {
 }
 
 
-int network::get(std::vector<uint8_t> &arg) {
+int network_wifi::get(std::vector<uint8_t> &arg) {
     std::vector<uint8_t> nh;
     if (read_exact(nh, sizeof(net_hdr)) == -1) {
         return -1;
@@ -162,7 +162,7 @@ int network::get(std::vector<uint8_t> &arg) {
     return nh2->type;
 }
 
-int network::get_nopacket(std::vector<uint8_t> &arg) {
+int network_wifi::get_nopacket(std::vector<uint8_t> &arg) {
     int c;
     while (true) {
         c = get(arg);
@@ -178,7 +178,7 @@ int network::get_nopacket(std::vector<uint8_t> &arg) {
     }
 }
 
-int network::cmd(int cmd, std::vector<uint8_t> &arg) {
+int network_wifi::cmd(int cmd, std::vector<uint8_t> &arg) {
     if (send(cmd, arg) == -1) {
         return -1;
     }

@@ -1,5 +1,5 @@
-#ifndef _NETWORK_H
-#define _NETWORK_H
+#ifndef _NETWORK_WIFI_H
+#define _NETWORK_WIFI_H
 
 #include <cstdint>
 #ifdef __WIN32
@@ -23,7 +23,7 @@ typedef int SOCKET;
 struct rx_info;
 class tx_info;
 
-class network {
+class network_wifi {
     public:
     enum {
         NET_RC = 1,
@@ -47,8 +47,8 @@ class network {
 
 
     public:
-    network(std::string iface);
-    ~network();
+    network_wifi(std::string iface);
+    ~network_wifi();
 
     int read(std::vector<uint8_t>& h80211, rx_info *ri);
     int write(const std::vector<uint8_t>& h80211, tx_info *ti);

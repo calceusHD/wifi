@@ -4,7 +4,7 @@
 #include <thread>
 #include <iostream>
 #include <vector>
-#include "network.h"
+#include "network_wifi.h"
 #include "crc32.h"
 #include "packet.h"
 
@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
         printf("please specify an input file\n");
     }
 
-    network net(argv[1]);
+    network_wifi net(argv[1]);
 
     bool client = argv[2][0] == 'c';
     net.set_channel(38);

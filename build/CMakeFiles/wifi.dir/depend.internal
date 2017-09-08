@@ -16,15 +16,10 @@ CMakeFiles/wifi.dir/src/main.cpp.o
  /home/qwe/wifi/src/common.h
  /home/qwe/wifi/src/crc32.h
  /home/qwe/wifi/src/main.cpp
- /home/qwe/wifi/src/network.h
  /home/qwe/wifi/src/packet.h
 CMakeFiles/wifi.dir/src/network.cpp.o
- ../src/byteorder.h
- ../src/network.h
- /home/qwe/wifi/src/network.cpp
 CMakeFiles/wifi.dir/src/packet.cpp.o
  /home/qwe/wifi/src/common.h
  /home/qwe/wifi/src/frame.h
- /home/qwe/wifi/src/network.h
  /home/qwe/wifi/src/packet.cpp
  /home/qwe/wifi/src/packet.h
