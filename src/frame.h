@@ -26,7 +26,7 @@ class frame {
         frame& set_payload(std::vector<uint8_t>::const_iterator begin, std::vector<uint8_t>::const_iterator end);
 
 
-        const std::vector<uint8_t>& assemble();
+        const std::vector<uint8_t> assemble();
 
 
 

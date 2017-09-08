@@ -75,14 +75,14 @@ int network_wifi::read(std::vector<uint8_t> &h80211, rx_info *ri) {
 int network_wifi::write(const std::vector<uint8_t>& h80211, tx_info *ti) {
     std::vector<uint8_t> tmp;
 
-    tmp.resize(sizeof(*ti));
+    tmp.resize(sizeof(tx_info));
     if (ti) {
-        memcpy(tmp.data(), ti, sizeof(*ti));
+        memcpy(tmp.data(), ti, sizeof(tx_info));
     } else {
-        memset(tmp.data(), 0, sizeof(*ti));
+        memset(tmp.data(), 0, sizeof(tx_info));
     }
     tmp.insert(tmp.end(), h80211.begin(), h80211.end());
-    std::cout << "sending" << tmp.size() << "bytes" << std::endl;
+    std::cout << "sending " << tmp.size() << " bytes" << std::endl;
     return cmd(NET_WRITE, tmp);
 }
 
@@ -118,10 +118,7 @@ int network_wifi::send(int command, const std::vector<uint8_t>& arg) {
     hdr->type = command;
     hdr->len = htonl(arg.size());
 
-    std::cout << "setting a size of " << arg.size() << std::endl;
 
-    std::cout << *(uint32_t*)(((uint8_t*)hdr)+1) << std::endl;
-    std::cout << sizeof(net_hdr) << std::endl;
     tmp.insert(tmp.end(), arg.begin(), arg.end());
 
     ::send(m_s, (const char*)tmp.data(), tmp.size(), 0);
@@ -154,11 +151,9 @@ int network_wifi::get(std::vector<uint8_t> &arg) {
     }
     net_hdr *nh2 = (net_hdr*)nh.data();
     uint32_t len = ntohl(nh2->len);
-    std::cout << "packetlen is " << len << std::endl;
     if (len && read_exact(arg, len) == -1) {
         return -1;
     }
-    std::cout << "arg is " << arg.size() << std::endl;
     return nh2->type;
 }
 
@@ -189,7 +184,6 @@ int network_wifi::cmd(int cmd, std::vector<uint8_t> &arg) {
         return -1;
     }
     assert(cmd == NET_RC);
-    std::cout << "got " << tmp.size() << " expected " << sizeof(rc) << std::endl;
     assert(tmp.size() == sizeof(rc));
     return ntohl(*(uint32_t*)tmp.data());
 }

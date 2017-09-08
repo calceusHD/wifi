@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
     network_wifi net(argv[1]);
 
     bool client = argv[2][0] == 'c';
-    net.set_channel(38);
+    net.set_channel(40);
     packet_writer p;
     std::vector<uint8_t> min_header = {
         0x08, 0x0,
@@ -43,10 +43,10 @@ int main(int argc, char **argv) {
 
     std::vector<uint8_t> test(min_header);
 
-    for (uint32_t i = 0; i < 2170; ++i) {
+    for (uint32_t i = 0; i < 1000; ++i) {
         test.push_back(i);
     }
-
+    p.set_data(test);
 
     
     //crc32::append_crc32(test);
@@ -62,8 +62,9 @@ int main(int argc, char **argv) {
 
     std::cout << "rate is " << net.get_rate() << std::endl;
     if (!client) {
-        for (unsigned int i = 0; i < 4; ++i) {
-            net.write(test, &txi);
+        for (unsigned int i = 0; i < 1; ++i) {
+            p.write_to_network(net);
+            net.write(test, nullptr);
         }
     }
     for (unsigned int i = 0; i < 8; ++i) {

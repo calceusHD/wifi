@@ -42,16 +42,16 @@ frame& frame::set_payload(std::vector<uint8_t>::const_iterator begin, std::vecto
     return *this;
 }
 
-const std::vector<uint8_t>& frame::assemble() {
+const std::vector<uint8_t> frame::assemble() {
     size_t header_bytes = 0;
-    std::vector<uint8_t> out;
 
     header_bytes += sizeof(mac_address) * 4;
     header_bytes += sizeof(uint16_t) * 3;
     byte_composer bc(header_bytes + std::distance(m_begin, m_end));
-    bc.add_uint16_t(0x0800).add_uint16_t(m_duration);
+    bc.add_uint16_t(0x0008).add_uint16_t(m_duration);
     bc.add_array(m_mac_1).add_array(m_mac_2).add_array(m_mac_3);
     bc.add_uint16_t(m_sequence);
     bc.add_vector(m_begin, m_end);
+    printf("assembling %zd bytes\n", bc.get_contents().size());
     return bc.get_contents();
 }

@@ -24,7 +24,7 @@ class byte_composer {
             m_bytes.reserve(reserve);
         }
 
-        inline const std::vector<uint8_t>& get_contents() {
+        inline const std::vector<uint8_t> get_contents() {
             return m_bytes;
         }
 
