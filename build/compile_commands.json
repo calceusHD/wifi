@@ -21,8 +21,8 @@
 },
 {
   "directory": "/home/qwe/wifi/build",
-  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/packet.cpp.o -c /home/qwe/wifi/src/packet.cpp",
-  "file": "/home/qwe/wifi/src/packet.cpp"
+  "command": "/usr/bin/c++   -I/home/qwe/wifi/src   --std=c++14 -O0 -g -Wall -Wextra   -o CMakeFiles/wifi.dir/src/packet_writer.cpp.o -c /home/qwe/wifi/src/packet_writer.cpp",
+  "file": "/home/qwe/wifi/src/packet_writer.cpp"
 },
 {
   "directory": "/home/qwe/wifi/build",

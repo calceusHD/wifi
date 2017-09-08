@@ -97,8 +97,8 @@ network_wifi.h
 /home/qwe/wifi/src/network_wifi.h
 crc32.h
 /home/qwe/wifi/src/crc32.h
-packet.h
-/home/qwe/wifi/src/packet.h
+packet_writer.h
+/home/qwe/wifi/src/packet_writer.h
 
 /home/qwe/wifi/src/network_wifi.cpp
 network_wifi.h
@@ -138,13 +138,13 @@ vector
 array
 -
 
-/home/qwe/wifi/src/packet.cpp
-packet.h
-/home/qwe/wifi/src/packet.h
+/home/qwe/wifi/src/packet_writer.cpp
+packet_writer.h
+/home/qwe/wifi/src/packet_writer.h
 frame.h
 /home/qwe/wifi/src/frame.h
 
-/home/qwe/wifi/src/packet.h
+/home/qwe/wifi/src/packet_writer.h
 vector
 -
 array

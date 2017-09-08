@@ -258,32 +258,32 @@ src/network_wifi.cpp.s:
 	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/network_wifi.cpp.s
 .PHONY : src/network_wifi.cpp.s
 
-src/packet.o: src/packet.cpp.o
+src/packet_writer.o: src/packet_writer.cpp.o
 
-.PHONY : src/packet.o
+.PHONY : src/packet_writer.o
 
 # target to build an object file
-src/packet.cpp.o:
-	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/packet.cpp.o
-.PHONY : src/packet.cpp.o
+src/packet_writer.cpp.o:
+	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/packet_writer.cpp.o
+.PHONY : src/packet_writer.cpp.o
 
-src/packet.i: src/packet.cpp.i
+src/packet_writer.i: src/packet_writer.cpp.i
 
-.PHONY : src/packet.i
+.PHONY : src/packet_writer.i
 
 # target to preprocess a source file
-src/packet.cpp.i:
-	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/packet.cpp.i
-.PHONY : src/packet.cpp.i
+src/packet_writer.cpp.i:
+	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/packet_writer.cpp.i
+.PHONY : src/packet_writer.cpp.i
 
-src/packet.s: src/packet.cpp.s
+src/packet_writer.s: src/packet_writer.cpp.s
 
-.PHONY : src/packet.s
+.PHONY : src/packet_writer.s
 
 # target to generate assembly for a file
-src/packet.cpp.s:
-	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/packet.cpp.s
-.PHONY : src/packet.cpp.s
+src/packet_writer.cpp.s:
+	$(MAKE) -f CMakeFiles/wifi.dir/build.make CMakeFiles/wifi.dir/src/packet_writer.cpp.s
+.PHONY : src/packet_writer.cpp.s
 
 # Help Target
 help:
@@ -309,9 +309,9 @@ help:
 	@echo "... src/network_wifi.o"
 	@echo "... src/network_wifi.i"
 	@echo "... src/network_wifi.s"
-	@echo "... src/packet.o"
-	@echo "... src/packet.i"
-	@echo "... src/packet.s"
+	@echo "... src/packet_writer.o"
+	@echo "... src/packet_writer.i"
+	@echo "... src/packet_writer.s"
 .PHONY : help
 
 

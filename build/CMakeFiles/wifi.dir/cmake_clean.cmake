@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wifi.dir/src/network_wifi.cpp.o"
   "CMakeFiles/wifi.dir/src/byteorder.cpp.o"
   "CMakeFiles/wifi.dir/src/crc32.cpp.o"
-  "CMakeFiles/wifi.dir/src/packet.cpp.o"
+  "CMakeFiles/wifi.dir/src/packet_writer.cpp.o"
   "CMakeFiles/wifi.dir/src/frame.cpp.o"
   "wifi.pdb"
   "wifi"

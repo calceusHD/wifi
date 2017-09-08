@@ -6,7 +6,7 @@
 #include <vector>
 #include "network_wifi.h"
 #include "crc32.h"
-#include "packet.h"
+#include "packet_writer.h"
 
 enum {
 	NET_RC = 1,

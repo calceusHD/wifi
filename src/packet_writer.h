@@ -1,5 +1,5 @@
-#ifndef _PACKET_H
-#define _PACKET_H
+#ifndef _PACKET_WRITER_H
+#define _PACKET_WRITER_H
 
 #include <vector>
 #include <array>
