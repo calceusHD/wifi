@@ -12,7 +12,7 @@ class packet_writer {
         std::vector<uint8_t> m_current_data;
 
         unsigned int m_frame_size, m_resend_count;
-
+        uint64_t m_packet_number;
     public:
         packet_writer();
 

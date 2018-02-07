@@ -7,6 +7,10 @@
 #include "network_wifi.h"
 #include "crc32.h"
 #include "packet_writer.h"
+#include <sys/select.h>
+#include "frame.h"
+#include "packet_reader.h"
+#include <cstring>
 
 enum {
 	NET_RC = 1,
@@ -26,6 +30,16 @@ int main(int argc, char **argv) {
     if (argc <= 1) {
         printf("please specify an input file\n");
     }
+    char *tmep = new char[2<<16];
+    fd_set rfds;
+    FD_ZERO(&rfds);
+    FD_SET(0, &rfds);
+
+    /*while (true) {
+        select(1, &rfds, nullptr, nullptr, nullptr);
+        size_t rd = read(0, tmep, 2<<16);
+        printf("read some %zd\n", rd);
+    }*/
 
     network_wifi net(argv[1]);
 
@@ -41,39 +55,46 @@ int main(int argc, char **argv) {
         0x00, 0x00,
     };
 
-    std::vector<uint8_t> test(min_header);
 
-    for (uint32_t i = 0; i < 1000; ++i) {
-        test.push_back(i);
+    std::vector<uint8_t> test;
+
+    for (uint32_t i = 0; i < 2000; ++i) {
+        test.push_back((i % 52) + 'A');
     }
     p.set_data(test);
 
-    
-    //crc32::append_crc32(test);
-    
-    //std::vector<uint8_t> test = {0xFF, 0xFF, 0x00,};
-    /*for (unsigned int i = 0; i < 256; ++i) {
-        test.push_back(i);
-    }*/
     rx_info rxi;
-    tx_info txi;
-    txi.ti_rate = 54'000'000;
     net.set_rate(54'000'000);
 
-    std::cout << "rate is " << net.get_rate() << std::endl;
+    //std::cout << "rate is " << net.get_rate() << std::endl;
     if (!client) {
-        for (unsigned int i = 0; i < 1; ++i) {
+        //for (unsigned int i = 0; i < 1; ++i) {
+        while (1) {
+            select(1, &rfds, nullptr, nullptr, nullptr);
+            size_t rd = read(0, tmep, 2<<16);
+            test.resize(rd);
+            memcpy(test.data(), tmep, rd);
+            p.set_data(test);
             p.write_to_network(net);
-            net.write(test, nullptr);
+            //net.write(test, nullptr);
         }
     }
-    for (unsigned int i = 0; i < 8; ++i) {
+    frame fra;
+    packet_reader pr;
+    while (1) {
         net.read(test, &rxi);
-        std::cout << "channel " << rxi.channel << " rate " << rxi.rate << std::endl;
+        fra.disassemble(test);
+        if (pr.process_frame(fra)) {
+            //printf("read packet of: %zd bytes\n", pr.get_data().size());
+            std::cout.write((char*)pr.get_data().data(), pr.get_data().size());
+        }
+
+
+        //std::cout << "channel " << rxi.channel << " rate " << rxi.rate << std::endl;
         /*for (unsigned int j = 0; j < test.size(); ++j) {
             std::cout << ", 0x" << std::hex << (int)test.at(j);
         }*/
-        std::cout << std::endl;
+        //std::cout << std::endl;
     }
 
 

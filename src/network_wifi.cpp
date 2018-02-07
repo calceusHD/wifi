@@ -82,7 +82,7 @@ int network_wifi::write(const std::vector<uint8_t>& h80211, tx_info *ti) {
         memset(tmp.data(), 0, sizeof(tx_info));
     }
     tmp.insert(tmp.end(), h80211.begin(), h80211.end());
-    std::cout << "sending " << tmp.size() << " bytes" << std::endl;
+    //std::cout << "sending " << tmp.size() << " bytes" << std::endl;
     return cmd(NET_WRITE, tmp);
 }
 
