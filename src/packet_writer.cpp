@@ -4,7 +4,7 @@
 
 packet_writer::packet_writer() {
     m_frame_size = 1500;
-    m_resend_count = 2;
+    m_resend_count = 1;
     m_packet_number = 1;
 }
 
@@ -19,7 +19,7 @@ void packet_writer::write_to_network(network_wifi &tgt) {
     
     //printf("frame_count: %d\n", frame_count);
     //printf("data_bytes: %d\n", byte_count);
-    //printf("packet_number start: %ld\n", m_packet_number);
+    //printf("packet_number start: lld\n", m_packet_number);
 
     for (unsigned int resend = 0; resend < m_resend_count; ++resend) {
         for (unsigned int current_frame = 0; current_frame < frame_count; ++current_frame) {
@@ -33,11 +33,11 @@ void packet_writer::write_to_network(network_wifi &tgt) {
             //printf("creating frame: %d to %d\n", frame_start, frame_end);
             frame f;
             mac_address *adr1 = (mac_address*)&m_packet_number;
-            mac_address adr2 = {0, 0, 0, 0, 0, 0};
+            mac_address adr2 = {0, 0, 0, 0, 0xCD, 0x34};
             memcpy(&adr2, &byte_count, sizeof(byte_count));
             f.set_mac_1(*adr1)
                 .set_mac_2(adr2)
-                .set_mac_3({0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF})
+                .set_mac_3({0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF})//{0xDF, 0x45, 0xC3, 0x1F, 0x8A, 0xB2})
                 .set_sequnce(current_frame)
                 .set_duration(0).
                 set_payload(m_current_data.begin() + frame_start, m_current_data.begin() + frame_end);

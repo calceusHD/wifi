@@ -13,10 +13,26 @@ int packet_reader::process_frame(frame fr) {
     uint64_t packet_number;
     mac_address adr_pack;
     adr_pack = fr.get_mac_1();
+    mac_address adr_bytes = fr.get_mac_2();
+
     memcpy(&packet_number, &adr_pack, sizeof(mac_address));
+
+    mac_address magic = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}; //{0xDF, 0x45, 0xC3, 0x1F, 0x8A, 0xB2};
+    mac_address temp = fr.get_mac_3();
+    
+
+    if (memcmp(&temp, &magic, sizeof(mac_address)) != 0) {
+        return 0;
+    }
+
+    if (adr_bytes[4] != 0xCD || adr_bytes[5] != 0x34) {
+        return 0;
+    }
+
+    printf("rx packet %lu\n", m_packet_number);
+
     if (packet_number > m_packet_number) {
         m_packet_number = packet_number;
-        mac_address adr_bytes = fr.get_mac_2();
         unsigned int byte_count = *((uint32_t*)&adr_bytes) ;
         m_frame_count = (byte_count - 1) / m_frame_size + 1; 
         m_valid_frames.clear();
