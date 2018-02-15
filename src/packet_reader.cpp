@@ -37,7 +37,7 @@ int packet_reader::process_frame(frame fr) {
         
         if (frame_diff > 1) {
             printf("lost %lu packets, in total %lu\n", frame_diff - 1, m_lost_packets);
-
+        }
 
         m_packet_number = packet_number;
         unsigned int byte_count = *((uint32_t*)&adr_bytes) ;
