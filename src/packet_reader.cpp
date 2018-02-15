@@ -5,6 +5,7 @@
 packet_reader::packet_reader() {
     m_frame_size = 1500;
     m_packet_number = 0;
+    m_lost_packets = 0;
 }
 
 
@@ -29,9 +30,15 @@ int packet_reader::process_frame(frame fr) {
         return 0;
     }
 
-    printf("rx packet %lu\n", m_packet_number);
 
     if (packet_number > m_packet_number) {
+        uint64_t frame_diff = packet_number - m_packet_number;
+        m_lost_packets += frame_diff - 1;
+        
+        if (frame_diff > 1) {
+            printf("lost %lu packets, in total %lu\n", frame_diff - 1, m_lost_packets);
+
+
         m_packet_number = packet_number;
         unsigned int byte_count = *((uint32_t*)&adr_bytes) ;
         m_frame_count = (byte_count - 1) / m_frame_size + 1; 

@@ -78,7 +78,7 @@ int main(int argc, char **argv) {
             fra.disassemble(test);
             if (pr.process_frame(fra)) {
                 rv = sendto(gst_sock, (char*)pr.get_data().data(), pr.get_data().size(), 0, res->ai_addr, res->ai_addrlen);
-                if (rv < 0) {
+                if (rv < 1) {
                     printf("snedto error %d\n", rv);
                 }
                 //std::cout.write((char*)pr.get_data().data(), pr.get_data().size());

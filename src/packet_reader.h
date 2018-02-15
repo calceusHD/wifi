@@ -10,7 +10,7 @@ class packet_reader {
         std::vector<uint8_t> m_current_packet;
         std::vector<bool> m_valid_frames;
         bool m_packet_done;
-        uint64_t m_packet_number;
+        uint64_t m_packet_number, m_lost_packets;
         unsigned int m_frame_count, m_frame_size;
     public:
         packet_reader();
